@@ -11,7 +11,7 @@ version: 1.0.{build}
 branches:
   # whitelist
   only:
-    - master
+    - develop
     
 # Do not build feature branch with open Pull Requests
 skip_branch_with_pr: false
@@ -29,7 +29,7 @@ platform: Any CPU
 #  - Any CPU
 
 # build Configuration, i.e. Debug, Release, etc.
-configuration: Release
+configuration: Debug
   
 before_build:
   - cmd: dotnet restore
