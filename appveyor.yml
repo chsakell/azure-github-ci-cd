@@ -1,11 +1,4 @@
-image: Visual Studio 2017
- 
-environment:
-  DOTNET_CLI_TELEMETRY_OPTOUT: true
-  DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
 
-# version format
-version: 1.0.{build}
 
 # branches to build
 
@@ -15,7 +8,11 @@ version: 1.0.{build}
   branches:
     only:
       - master
-
+  image: Visual Studio 2017
+  environment:
+    DOTNET_CLI_TELEMETRY_OPTOUT: true
+    DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
+  version: 1.0.{build}
   configuration: Release
   platform: Any CPU
   skip_branch_with_pr: false
@@ -31,7 +28,11 @@ version: 1.0.{build}
     only:
       - dev
       - /feature-.*/
-
+  image: Visual Studio 2017
+  environment:
+    DOTNET_CLI_TELEMETRY_OPTOUT: true
+    DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
+  version: 1.0.{build}
   configuration: Debug
   platform: Any CPU
   skip_branch_with_pr: false
