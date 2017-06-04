@@ -19,7 +19,9 @@
   before_build:
     - cmd: dotnet restore
   test_script:
-    - cmd: dotnet test C:\projects\azure-github-ci-cd\azure-github-ci-cd.Tests\azure-github-ci-cd.Tests.csproj
+    - cmd: dotnet test C:\projects\azure-github-ci-cd\azure-github-ci-cd.Tests\azure-github-ci-cd.Tests.csproj  --configuration Release
+    - bash coverage.sh
+    - bash coveralls.sh
 
 # configuration for all branches starting from "dev-"
 # build in Debug mode and deploy locally for testing
@@ -39,4 +41,6 @@
   before_build:
     - cmd: dotnet restore
   test_script:
-    - cmd: dotnet test C:\projects\azure-github-ci-cd\azure-github-ci-cd.Tests\azure-github-ci-cd.Tests.csproj
+    - cmd: dotnet test C:\projects\azure-github-ci-cd\azure-github-ci-cd.Tests\azure-github-ci-cd.Tests.csproj --configuration Debug
+    - bash coverage.sh
+    - bash coveralls.sh
