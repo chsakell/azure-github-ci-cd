@@ -4,3 +4,5 @@ environment:
   DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
 before_build:
   - cmd: dotnet restore
+test_script:
+  - cmd: dotnet test C:\projects\azure-github-ci-cd\azure-github-ci-cd.Tests\azure-github-ci-cd.Tests.csproj
