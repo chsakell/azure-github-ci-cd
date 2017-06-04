@@ -8,30 +8,34 @@ environment:
 version: 1.0.{build}
 
 # branches to build
-branches:
-  # whitelist
-  only:
-    - develop
-    
-# Do not build feature branch with open Pull Requests
-skip_branch_with_pr: false
 
-#---------------------------------#
-#       build configuration       #
-#---------------------------------#
+# configuration for "master" branch
+# build in Release mode and deploy to Azure
+-
+  branches:
+    only:
+      - master
 
-# build platform, i.e. x86, x64, Any CPU. This setting is optional.
-platform: Any CPU
+  configuration: Release
+  platform: Any CPU
+  skip_branch_with_pr: false
+  before_build:
+    - cmd: dotnet restore
+  test_script:
+    - cmd: dotnet test C:\projects\azure-github-ci-cd\azure-github-ci-cd.Tests\azure-github-ci-cd.Tests.csproj
 
-# to add several platforms to build matrix:
-#platform:
-#  - x86
-#  - Any CPU
+# configuration for all branches starting from "dev-"
+# build in Debug mode and deploy locally for testing
+-
+  branches:
+    only:
+      - dev
+      - /feature-.*/
 
-# build Configuration, i.e. Debug, Release, etc.
-configuration: Debug
-  
-before_build:
-  - cmd: dotnet restore
-test_script:
-  - cmd: dotnet test C:\projects\azure-github-ci-cd\azure-github-ci-cd.Tests\azure-github-ci-cd.Tests.csproj
+  configuration: Debug
+  platform: Any CPU
+  skip_branch_with_pr: false
+  before_build:
+    - cmd: dotnet restore
+  test_script:
+    - cmd: dotnet test C:\projects\azure-github-ci-cd\azure-github-ci-cd.Tests\azure-github-ci-cd.Tests.csproj
