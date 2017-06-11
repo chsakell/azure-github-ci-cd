@@ -36,7 +36,7 @@ namespace azure_github_ci_cd.Tests
             var viewResult = (ViewResult)controller.Contact();
             var viewName = viewResult.ViewName;
 
-            Assert.True(string.IsNullOrEmpty(viewName) || viewName == "Index");
+            Assert.True(string.IsNullOrEmpty(viewName) || viewName == "Contact");
         }
     }
 }
