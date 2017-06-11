@@ -33,7 +33,7 @@ namespace azure_github_ci_cd.Tests
         public void Contact_should_return_default_view()
         {
             var controller = new HomeController();
-            var viewResult = (ViewResult)controller.Index();
+            var viewResult = (ViewResult)controller.Contact();
             var viewName = viewResult.ViewName;
 
             Assert.True(string.IsNullOrEmpty(viewName) || viewName == "Index");
