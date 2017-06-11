@@ -12,6 +12,7 @@ namespace azure_github_ci_cd.Tests
         {
         }
 
+        /*
         [Fact(DisplayName = "Index should return default view")]
         public void Index_should_return_default_view()
         {
@@ -21,6 +22,8 @@ namespace azure_github_ci_cd.Tests
 
             Assert.True(string.IsNullOrEmpty(viewName) || viewName == "Index");
         }
+        */
+        
 
     }
 }

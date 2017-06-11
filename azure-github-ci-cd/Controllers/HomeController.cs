@@ -3,13 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using azure_github_ci_cd.Model;
+using System.Collections;
 
 namespace azure_github_ci_cd.Controllers
 {
     public class HomeController : Controller
     {
+        public HomeController(AzureDbContext context)
+        {
+            List<User> users = context.Users.ToList();
+        }
+
         public IActionResult Index()
         {
+            
             return View();
         }
 
