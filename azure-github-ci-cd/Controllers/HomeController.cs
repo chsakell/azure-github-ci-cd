@@ -31,7 +31,7 @@ namespace azure_github_ci_cd.Controllers
         {
             ViewData["Message"] = "Your contact page.";
 
-            return View();
+            return View("Contact");
         }
 
         public IActionResult Error()
