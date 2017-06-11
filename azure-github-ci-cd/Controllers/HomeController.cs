@@ -10,9 +10,8 @@ namespace azure_github_ci_cd.Controllers
 {
     public class HomeController : Controller
     {
-        public HomeController(AzureDbContext context)
+        public HomeController()
         {
-            List<User> users = context.Users.ToList();
         }
 
         public IActionResult Index()
@@ -32,7 +31,7 @@ namespace azure_github_ci_cd.Controllers
         {
             ViewData["Message"] = "Your contact page.";
 
-            return View();
+            return View("Contact");
         }
 
         public IActionResult Error()
