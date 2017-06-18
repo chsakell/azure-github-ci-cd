@@ -1,10 +1,8 @@
-# Continuous Integration & Delivery with Microsoft Azure & GitHub – Best Practices
+# [Continuous Integration & Delivery with Microsoft Azure & GitHub – Best Practices](http://wp.me/p3mRWu-1dt)
 
-# [Blog post](http://wp.me/p3mRWu-1dt)
+Master: [![Build status](https://ci.appveyor.com/api/projects/status/github/chsakell/azure-github-ci-cd?branch=master&svg=true)](https://ci.appveyor.com/project/chsakell/azure-github-ci-cd/branch/master)
 
-## Master: [![Build status](https://ci.appveyor.com/api/projects/status/github/chsakell/azure-github-ci-cd?branch=master&svg=true)](https://ci.appveyor.com/project/chsakell/azure-github-ci-cd/branch/master)
-
-## Develop: [![Build status](https://ci.appveyor.com/api/projects/status/github/chsakell/azure-github-ci-cd?branch=develop&svg=true)](https://ci.appveyor.com/project/chsakell/azure-github-ci-cd/branch/develop)
+ Develop: [![Build status](https://ci.appveyor.com/api/projects/status/github/chsakell/azure-github-ci-cd?branch=develop&svg=true)](https://ci.appveyor.com/project/chsakell/azure-github-ci-cd/branch/develop)
 
 <a href="http://wp.me/p3mRWu-1dt" rel="attachment wp-att-3961" target="_blank"><img src="https://chsakell.files.wordpress.com/2017/06/azure-github-ci-cd-37.png?w=700&amp;h=355" alt="aspnet5-agnular2-03"  class="alignnone size-full wp-image-3961"></a>
 
