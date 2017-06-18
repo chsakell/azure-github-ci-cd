@@ -1,4 +1,6 @@
-# [Continuous Integration & Delivery with Microsoft Azure & GitHub – Best Practices](http://wp.me/p3mRWu-1dt)
+# Continuous Integration & Delivery with Microsoft Azure & GitHub
+
+[Read blog post](http://wp.me/p3mRWu-1dt)
 
 Master: [![Build status](https://ci.appveyor.com/api/projects/status/github/chsakell/azure-github-ci-cd?branch=master&svg=true)](https://ci.appveyor.com/project/chsakell/azure-github-ci-cd/branch/master)
 
